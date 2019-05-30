@@ -16,6 +16,7 @@
 
 
 
+
 // HIGHER_ORDER_FUNCTIONS
 
 
@@ -56,34 +57,34 @@
 
 // BASIC FILTER
 
-// var obj1 = {
-//     message: 'lorem ipsum'
-// }
+var obj1 = {
+    message: 'lorem ipsum'
+}
 
-// var obj2 = {
-//     message: 'lorem ipsum 2'
-// }
+var obj2 = {
+    message: 'lorem ipsum 2'
+}
 
-// var obj3 = {
-//     message: 'lorem ipsum 3'
-// }
+var obj3 = {
+    message: 'lorem ipsum 3'
+}
 
-// var obj4 = {
-//     message: 'lorem ipsum 4'
-// }
+var obj4 = {
+    message: 'lorem ipsum 4'
+}
 
-// var objList = [obj1, obj2, obj3, obj4];
-
-
-// var check = (obj) => obj.hasOwnProperty('message');
-// var check2 = (obj) => obj.message.length < 50;
-
-// function getShortMessages(objArray){
-//    return objArray.filter(check && check2);
-// }
+var objList = [obj1, obj2, obj3, obj4];
 
 
-// console.log(getShortMessages(objList));
+var check = (obj) => obj.hasOwnProperty('message');
+var check2 = (obj) => obj.message.length < 50;
+
+function getShortMessages(objArray){
+   return objArray.filter(check && check2);
+}
+
+
+console.log(getShortMessages(objList));
 
 
 
