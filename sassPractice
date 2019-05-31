@@ -1,0 +1,193 @@
+
+// VARIABLES 
+
+
+// $color: '#000'; 
+
+// body {
+//     color: $color;
+// }
+
+
+
+
+
+
+
+// NESTING 
+
+// aside {
+//     ul {
+//       margin: 0;
+//     }
+//     a {
+//       color: red;
+//     }
+//   }
+
+
+
+
+
+// IMPORT
+// Css tambien puede desacoplarse para mejor comprension y mantenimiento
+// Internamente se ocupa de hacer el trabajo correspondiente para enviar un solo documento al navegador.
+
+// @import 'common';
+
+// body {
+//   color: $color;
+// }
+
+
+
+
+
+
+
+// MIXINGS
+
+// @mixin border($thickness) {
+//     border-width: $thickness;
+//   }
+  
+//   img {
+//     @include border(10px);
+//   }
+  
+
+
+
+
+
+// MIXING CONTENT
+
+// @mixin border($thickness) {
+//     border-width: $thickness;
+//     @content;
+//   }
+  
+//   img {
+//     @include border(10px) {
+//       border-style: solid;
+//     }
+//   }
+  
+
+
+
+// EXTEND 
+// .push-button {
+//     background-color: blue;
+//   }
+  
+//   .main-button {
+//     @extend .push-button;
+//     font-weight: bold;
+//   }
+
+
+
+// OPERATORS
+// $page-width: 1400px;
+// $padding: 20px;
+
+// .container {
+//   padding: $padding;
+//   width: 0.8 * $page-width - 2 * $padding;
+// }
+
+
+
+
+
+
+// NESTED PROPERTIES - Sirve solo para no repetir la palabra border...
+
+// .sassy {
+//     border: {
+//       width: 10px;
+//       color: red;
+//       radius: 5px;
+//     }
+//   }
+
+
+
+
+
+
+
+// PARENT SELECTOR - ante algun evento puede modificar sus caracteristicas dentro de css
+
+// button {
+//     color: black;
+    
+//     &:focus {
+//       color: red;
+//     }
+//   }
+  
+// Un ejemplo mas claro es el "hover" para cambiar el color cuando le paso el mouse por arriba:
+// El & indica que me estoy refiriendo al padre, osea al "li"
+
+// li {
+//     &:hover {
+//         color: pink;
+//     }
+// }
+
+
+
+
+
+
+
+// INTERPOLATION
+
+// $selector: 'article';
+
+// #{$selector} {
+//   color: #ff0000;
+// }
+
+
+
+
+
+
+// EACH // cada clase que tenga animal adelante, ponele pading 3
+// @each $animal in cheetah, puma, jaguar, panther, tiger, leopard {
+//     .#{$animal}-picture {
+//       padding: 3em;
+//     }
+//   }
+
+
+
+
+
+
+
+// FOR - del h1 al h6 ponerle 24px - (3 * index)
+// @for $heading-level from 1 through 6 {
+//     h#{$heading-level} {
+//       font-size: 24px - 3 * $heading-level;
+//     }
+//   }
+
+
+
+
+
+
+
+// FOR WHILE
+// $heading-level: 1;
+// @while $heading-level <= 6  {
+//   h#{$heading-level} {
+//     font-size: 24px - 3 * $heading-level;
+//   }
+//   $heading-level: $heading-level + 1;
+// }
+
