@@ -341,3 +341,127 @@
  
 //  parsePromised(process.argv[2])
 //  .then(null, onReject);
+
+
+
+
+
+
+
+
+
+
+// AN_IMPORTANT_RULE
+
+
+// function iterate(num) {
+//     console.log(num);
+//     return num + 1;
+//   }
+  
+//   function alwaysThrows() {
+//     throw new Error('OH NOES');
+//   }
+  
+//   function onReject(error) {
+//     console.log(error.message);
+//   }
+  
+//   Promise.resolve(iterate(1))
+//   .then(iterate)
+//   .then(iterate)
+//   .then(iterate)
+//   .then(iterate)
+//   .then(alwaysThrows)
+//   .then(iterate)
+//   .then(iterate)
+//   .then(iterate)
+//   .then(iterate)
+//   .then(iterate)
+//   .catch(onReject);
+
+
+
+
+
+
+
+
+
+
+
+
+
+// MULTIPLE PROMISES
+
+// function all(a, b) {
+//     return new Promise(function (fulfill, reject) {
+//       var counter = 0;
+//       var out = [];
+  
+//       a.then(function (val) {
+//         out[0] = val;
+//         counter++;
+  
+//         if (counter >= 2) {
+//           fulfill(out);
+//         }
+//       });
+  
+//       b.then(function (val) {
+//         out[1] = val;
+//         counter++;
+  
+//         if (counter >= 2) {
+//           fulfill(out);
+//         }
+//       });
+//     });
+//   }
+  
+//   all(getPromise1(), getPromise2())
+//     .then(console.log);
+  
+
+
+
+
+
+
+
+
+
+// FETCH JSON 
+// var qhttp = require('q-io/http');
+
+// var data = qhttp.read("http://localhost:1337")
+// .then(function (json) {
+//   console.log(JSON.parse(json));
+// })
+// .then(null, console.error)
+// .done()
+
+// console.log(data);
+
+
+
+
+
+
+
+
+
+// DO SOME WORK 
+// var qhttp = require('q-io/http');
+
+// qhttp.read("http://localhost:7000/")
+// .then(function (id) {
+//   return qhttp.read("http://localhost:7001/" + id);
+// })
+// .then(function (json) {
+//   console.log(JSON.parse(json));
+// })
+// .then(null, console.error)
+// .done();
+
+
